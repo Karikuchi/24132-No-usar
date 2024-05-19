@@ -89,6 +89,11 @@ body {
     width: 30px;
 }
 
+/*icono login*/
+
+.lg-icon{
+    width: 20px;
+}
 
 .nav__close {
     display: var(--show, none);
@@ -184,6 +189,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 1em;
     align-items: center;
+    margin: 1.5rem;
 }
 
 .Tendencias__picture {
@@ -194,7 +200,9 @@ body {
     line-height: 1.7;
     margin-bottom: 15px;
 }
-
+.Tendencias p, a {
+    margin: 0.5rem;
+}
 .Tendencias__img {
     width: 50%;
     align-self: auto;
@@ -273,7 +281,7 @@ body {
 .questions__padding {
     padding: 0;
     transition: padding .2s;
-    border: 1px solid #0909cf;
+    border: 1px solid #21217c;
     border-radius: 5px;
 }
 
@@ -284,6 +292,7 @@ body {
 .questions__answer {
     padding: 30px 0 30px;
     cursor: pointer;
+    margin: 1rem 2rem;
 }
 
 .questions__title {
@@ -421,7 +430,281 @@ body {
 }
 
 
+
+
+/* SOBRE NOSOTROS - EL EQUIPO */
+section.nosotros{
+    text-align: center;
+    margin-top: 50px;
+    background-color: #cfdbf5;
+    padding: 100px;
+}
+.presentacion {
+    color: #153662;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-style: italic; /* Estilo de fuente en cursiva */
+    font-weight: bold; /* Peso de la fuente en negrita */
+}
+div.nosotros {
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+    width: 95%;
+    display: flex;
+    justify-content: space-around; /* Esto distribuirá el espacio disponible entre las cartas */
+    
+}
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+    margin: 40px;
+    background-color: #f4f4f5;
+    z-index: 1;
+}
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.card .cont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+.card .cont .img {
+    height: 50%;
+    margin-bottom: 20px;
+}
+
+.card .cont .img img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(73, 69, 52, 0.4);
+}
+
+.card .cont span {
+    position: absolute;
+    background: linear-gradient(to right, #153662, royalblue);
+    transform: rotate(-35deg);
+    width: 350px;
+    height: 200px;
+    top: -50px;
+    left: -100px;
+}
+
+.card .cont h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card .cont h6 {
+    color: #153662;
+}
+
+.card .cont p {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.card .links {
+    position: absolute;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+    padding: 20px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    transition: 1s;
+}
+
+.card .links a{
+padding: 10px;
+align-items: center;
+justify-content: center;
+color: rgb(71, 70, 70);
+}
+
+.footer__icons .fa-brands {
+    font-size: 20px;
+    
+}
+.card:hover .links {
+    right: -50px;
+    border-radius: 0 10px 10px 0;
+}
+
+.card .links a:nth-child(1):hover {
+    color:blue ;
+}
+
+
+/*Login styles*/
+.lg-body{
+    display: grid;
+    place-content: center;
+    
+    width: 100%;
+    height: 100vh;
+
+    background-image: linear-gradient(
+        to bottom right,
+        #04152b 0%,
+        #153662 20%,
+        #355882 40%,
+        #516a88 60%,
+        #cfd7d9 80%
+    );
+    background-size: 200% 200%;
+
+    animation: movimiento 5s linear infinite alternate;
+}
+/*Animacion de fondo*/
+@keyframes movimiento {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+.lg-form-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+}
+.lg-form-logo{
+    width: 30%;
+    height: 30%;
+    margin-bottom: 2rem;
+}
+.lg-title{
+    margin-bottom: 1rem;
+}
+.lg-form_flotante{
+    position: relative;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+.lg-form_flotante label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    opacity: 0.5;
+}
+.lg-form_flotante input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-size: 16px;
+}
+.lg-form_flotante input:focus{
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+.lg-form_flotante input:focus + label,
+.lg-form_flotante input:not(:placeholder-shown) + label {
+  transform: translate(0, -1.5rem) scale(0.85);
+  opacity: 1;
+}
+.lg-form_btn{
+    width: 55%;
+    padding: 0.5rem 0.75rem;
+    margin-left: 0.75rem;
+    margin-bottom: 0.5rem;
+    background-color: #153662;
+    color: white;
+    border-radius: 0.2rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.lg-form_text{
+    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+}
+.lg-main {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba(37, 40, 42, 0.361);
+}
+.lg-container_back .lg-back{
+    width: 7%;
+    height: auto;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+}
+.formInvalido {
+    border: 2px solid rgb(108, 19, 19);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(123, 9, 9, 0.468);
+}
+.formValido {
+    border: 2px solid rgb(11, 42, 35);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(8, 151, 70, 0.25);
+}
+#mensaje-error{
+    display: none;
+    color: rgb(250, 10, 10);
+    margin-top: 0.25rem;
+    padding-top: 0.2rem;
+}
+
+
+
+
+
+
+
+
 /* Media queries */
+@media (max-width:1467px) {
+    .nosotros {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 30%; /* Reducir el ancho de las tarjetas para que quepan en pantalla */
+        margin: 20px;
+    }
+    .card .cont span {
+        transform: rotate(-29deg);
+        width: 450px;
+        height: 200px;
+    }
+}
 
 @media (max-width:1000px) {
     .nav__menu {
@@ -476,12 +759,22 @@ body {
     .Tendencias__container {
         grid-template-columns: 1fr;
         grid-template-rows: max-content 1fr;
-        gap: 3em;
+        gap: 3rem;
         text-align: center;
+        margin: 1rem;
     }
 
     .Tendencias__picture {
         justify-self: center;
+    }
+    .Tendencias p{
+        margin: 1rem;
+    }
+    .Tendencias .subtitle{
+        margin: 2rem 0.75;
+    }
+    .Tendencias div{
+        margin-top: 4rem;
     }
 
     .testimony__container {
@@ -528,6 +821,16 @@ body {
 
     .footer__input {
         flex: 1;
+    }
+    .card {
+        width: 50%; /* Reducir el ancho de las tarjetas para que quepan en pantalla */
+        margin: 20px;
+    }
+
+    .card .cont span {
+        transform: rotate(-18deg);
+        width: 560px;
+        height: 180px;
     }
 
 }
@@ -593,6 +896,21 @@ body {
         margin-right: auto;
         margin-left: 0;
 
+    }
+
+    /*nosotros*/
+    .nosotros {
+        flex-direction: column; /* Cambiar a dirección de columna */
+        align-items: center;
+    }
+
+    .card {
+        width: 80%; /* Mantener el tamaño de las tarjetas */
+    }
+    .card .cont span {
+        transform: rotate(-18deg);
+        width: 560px;
+        height: 180px;
     }
 
     @media (max-width:600px) {
@@ -681,186 +999,12 @@ body {
             margin-left: 0;
 
         }
-    }
-}
-
-/* SOBRE NOSOTROS - EL EQUIPO */
-section.nosotros{
-    text-align: center;
-    margin-top: 50px;
-    background-color: #cfdbf5;
-    padding: 100px;
-}
-.presentacion {
-    color: #153662;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-style: italic; /* Estilo de fuente en cursiva */
-    font-weight: bold; /* Peso de la fuente en negrita */
-}
-div.nosotros {
-    align-items: center;
-    justify-content: center;
-    margin: 2%;
-    width: 95%;
-    display: flex;
-    justify-content: space-around; /* Esto distribuirá el espacio disponible entre las cartas */
-    
-}
-.card {
-    position: relative;
-    width: 250px;
-    height: 350px;
-    border-radius: 10px;
-    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
-    margin: 40px;
-    background-color: #f4f4f5;
-}
-
-* {
-
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-.card .cont {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    z-index: 100;
-}
-
-.card .cont .img {
-    height: 50%;
-    margin-bottom: 20px;
-}
-
-.card .cont .img img {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(73, 69, 52, 0.4);
-}
-
-.card .cont span {
-    position: absolute;
-    background: linear-gradient(to right, #153662, royalblue);
-    transform: rotate(-35deg);
-    width: 350px;
-    height: 200px;
-    top: -50px;
-    left: -100px;
-}
-
-.card .cont h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.card .cont h6 {
-    color: #153662;
-}
-
-.card .cont p {
-    margin-top: 8px;
-    font-size: 13px;
-}
-
-.card .links {
-    position: absolute;
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
-    padding: 20px;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-    top: 15px;
-    transition: 1s;
-}
-
-.card .links a{
-padding: 10px;
-align-items: center;
-justify-content: center;
-color: rgb(71, 70, 70);
-}
-
-.footer__icons .fa-brands {
-    font-size: 20px;
-    
-}
-.card:hover .links {
-    right: -50px;
-    border-radius: 0 10px 10px 0;
-}
-
-.card .links a:nth-child(1):hover {
-    color:blue ;
-}
-
-
-/* Pantallas menores a 1000px de ancho */
-@media screen and (max-width: 1000px) {
-    .nosotros {
-        flex-wrap: wrap;
-    }
-
-    .card {
-        width: 30%; /* Reducir el ancho de las tarjetas para que quepan en pantalla */
-        margin: 20px;
-    }
-}
-
-/* Pantallas menores a 800px de ancho */
-@media screen and (max-width: 800px) {
-    .nosotros {
-        flex-direction: column; /* Cambiar a dirección de columna */
-        align-items: center;
-    }
-
-    .card {
-        width: 80%; /* Mantener el tamaño de las tarjetas */
-    }
-}
-
-/* Pantallas menores a 600px de ancho */
-@media screen and (max-width: 600px) {
-    .card .cont {
-        display: grid; /* Cambiar a grid layout */
-        grid-template-rows: auto auto; /* Dos filas de altura automática */
-        grid-template-columns: 1fr 1fr; /* Dos columnas con igual fracción de ancho */
-        gap: 10px; /* Espacio entre las celdas */
-    }
-
-    .card .cont .img {
-        grid-row: 1; /* La imagen en la primera fila */
-        grid-column: 1 / span 2; /* Ocupa dos columnas */
-    }
-
-    .card .cont h4 {
-        grid-row: 2; /* Título en la segunda fila */
-        grid-column: 1; /* En la primera columna */
-    }
-
-    .card .cont h6 {
-        grid-row: 2; /* Subtítulo en la segunda fila */
-        grid-column: 2; /* En la segunda columna */
-    }
-
-    .card .cont p {
-        grid-row: 3; /* Párrafo en la tercera fila */
-        grid-column: 1 / span 2; /* Ocupa dos columnas */
+        section .nosotros{
+            padding: 0.75rem;
+        }
+        div.nosotros{
+            width: 20rem;
+        }
+        
     }
 }
